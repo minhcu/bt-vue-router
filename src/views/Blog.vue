@@ -1,26 +1,6 @@
 <template>
-  <div class="home">
-    <div class="head" v-for="post in blog.slice(0, 1)" :key="post" @click="$router.push('/blog/' + post.id)" :style="{backgroundImage: 'url(' + post.image + ')'}">
-      <div class="featured-text">
-        <p class="featured">featured article</p>
-        <h2>
-          {{post.title}}
-        </h2>
-        <div class="info">
-          <span>
-            {{post.author}}
-          </span>
-          <span>
-            {{post.date}}
-          </span>
-        </div>
-        <p>
-          {{post.descript}}
-        </p>
-      </div>
-    </div>
-    <div class="blog">
-    <div class="post" :id="post.id" :key="post" v-for="post in blog.slice(1,4)" @click="$router.push('/blog/' + post.id)">
+  <div class="blog">
+    <div class="post" :id="post.id" :key="post" v-for="post in blog" @click="$router.push('/blog/' + post.id)">
       <div class="preview-image">
         <img :src="post.image">
       </div>
@@ -39,7 +19,6 @@
         </p>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -130,62 +109,43 @@ export default {
         }
       ]
     }
-  },
-  computed: {
-    background: function () {
-      return this.post.image;
-    }
   }
 }
 </script>
 
 <style lang="scss">
-.home {
-  padding: 15px 25px;
-  .head {
-    height: 700px;
-    background-size: cover;
-    background-position: center;
+.blog {
+  width: 1200px;
+  margin: 100px auto;
+  .post {
+    display: flex;
     cursor: pointer;
-    position: relative;
-    .featured-text {
-      position: relative;
-      background-color: white;
-      width: 500px;
-      margin-left: 100px;
-      padding: 50px 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.205);
-      .featured {
-        color: grey; 
-        text-transform: uppercase;
-        margin: 5px 0;
+    margin: 30px 0;
+    .preview-image {
+      width: 30%;
+      img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
       }
+    }
+    .text {
+      width: 70%;
+      padding: 25px 25px;
       h2 {
         margin: 0;
-        font-size: 40px;
+        font-size: 30px;
       }
       .info {
         color: grey;
         span {
           margin-right: 10px;
         }
-        margin: 10px 0;
       }
     }
   }
-  .head:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.308);
-  }
-  .head::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .head:hover::before {
-    background-color: rgba(0, 0, 0, 0.5);
+  .post:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.205);
   }
 }
 </style>
