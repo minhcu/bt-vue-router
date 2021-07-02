@@ -2,7 +2,7 @@
 Layout: https://www.figma.com/file/fQcYavpoLAoaT3ry4mSgVD/Nuntium-Blog-UI-Design-(Community)?node-id=2%3A750
 
 ```diff
-+ - [x] Đầu tiên là project chưa run được, trong folder views ko có Home.vue, Login.vue, Dashboard.vue | **Đã fix**
++ [x] Đầu tiên là project chưa run được, trong folder views ko có Home.vue, Login.vue, Dashboard.vue | **Đã fix**
 ```
 - [ ] đầy đủ cái routers, đầy đủ layouts
 - [ ] các btn yêu cầu có sử dụng được ( click logo, login )
