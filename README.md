@@ -1,5 +1,8 @@
-#bt-vue-router
+# bt-vue-router
+
 Layout: https://www.figma.com/file/fQcYavpoLAoaT3ry4mSgVD/Nuntium-Blog-UI-Design-(Community)?node-id=2%3A750
+
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
 
 ```diff
 + [x] Đầu tiên là project chưa run được, trong folder views ko có Home.vue, Login.vue, Dashboard.vue | **Đã fix**
