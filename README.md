@@ -6,7 +6,7 @@ Layout: https://www.figma.com/file/fQcYavpoLAoaT3ry4mSgVD/Nuntium-Blog-UI-Design
 - :heavy_check_mark: đầy đủ cái routers, đầy đủ layouts
 - :heavy_check_mark: các btn yêu cầu có sử dụng được ( click logo, login )
 - :heavy_check_mark: chưa đầy đủ các trang yêu cầu
-- :x: phần blog detail computed yêu cầu return về blog ( ko phải id )
+- :heavy_check_mark: phần blog detail computed yêu cầu return về blog ( ko phải id )
 - :x: nội dung các trang quá ít, có trang ko có nội dung
 
 Nhận xét :
