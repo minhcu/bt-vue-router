@@ -16,5 +16,5 @@ Nhận xét :
 - :heavy_check_mark: chú ý chia component uncommon và common , thường phần component của layout thì để ở common
 - :x: nội dung các trang dài nên chia thành các component
 - :x: trang dashboard nên thêm điều hướng để sang các trang khác
-- :x: nội dung ít nhưng chưa responsive | *Chưa responsive: About | Navbar | Home*
+- :x: nội dung ít nhưng chưa responsive | *Chưa responsive: About | Navbar | Home | Dashboard*
 - :x: nhát đổi nội dung content :D
