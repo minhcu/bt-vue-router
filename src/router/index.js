@@ -20,12 +20,12 @@ const routes = [
     component: About
   },
   {
-    path: "/blog",
+    path: "/blogs",
     name: "Blog",
     component: Blog
   },
   {
-    path:"/blog/:id",
+    path:"/blogs/:id",
     component: BlogView,
   },
   {

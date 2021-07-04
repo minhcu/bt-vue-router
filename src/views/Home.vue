@@ -1,45 +1,59 @@
 <template>
   <div class="home">
-    <div class="head" v-for="post in blog.slice(0, 1)" :key="post" @click="$router.push('/blog/' + post.id)" :style="{backgroundImage: 'url(' + post.image + ')'}">
+    <div
+      class="head"
+      v-for="post in blog.slice(0, 1)"
+      :key="post.id"
+      @click="$router.push('/blogs/' + post.id)"
+      :style="{ backgroundImage: 'url(' + post.image + ')' }"
+    >
       <div class="featured-text">
         <p class="featured">featured article</p>
         <h2>
-          {{post.title}}
+          {{ post.title }}
         </h2>
         <div class="info">
           <span>
-            {{post.author}}
+            {{ post.author }}
           </span>
           <span>
-            {{post.date}}
+            {{ post.date }}
           </span>
         </div>
         <p>
-          {{post.descript}}
+          {{ post.descript }}
         </p>
       </div>
     </div>
-    <div class="blog">
-    <div class="post" :id="post.id" :key="post" v-for="post in blog.slice(1,4)" @click="$router.push('/blog/' + post.id)">
-      <div class="preview-image">
-        <img :src="post.image">
+    <div class="blog container">
+      <div class="row">
+        <div
+        class="post col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+        :id="post.id"
+        :key="post.id"
+        v-for="post in blog.slice(1, 4)"
+        @click="$router.push('/blog/' + post.id)"
+      >
+        <div class="preview-image">
+          <img :src="post.image" />
+        </div>
+        <div class="text">
+          <h2>{{ post.title }}</h2>
+          <p class="info">
+            <span>
+              {{ post.author }}
+            </span>
+            <span>
+              {{ post.date }}
+            </span>
+          </p>
+          <p class="descript">
+            {{ post.descript }}
+          </p>
+        </div>
       </div>
-      <div class="text">
-        <h2> {{post.title}} </h2>
-        <p class="info">
-          <span>
-            {{post.author}}
-          </span>
-          <span>
-            {{post.date}}
-          </span>
-        </p>
-        <p class="descript">
-          {{post.descript}}
-        </p>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -51,92 +65,102 @@ export default {
         {
           id: 0,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 1,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 2,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 3,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 4,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 5,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 6,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 7,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 8,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
+          date: "26/06/2021",
         },
         {
           id: 9,
           title: "What is Lorem Ipsum?",
-          descript: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          descript:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           image: "https://i.ytimg.com/vi/Xz89Y-tNkRQ/maxresdefault.jpg",
           author: "Minh Dong",
-          date: "26/06/2021"
-        }
-      ]
-    }
+          date: "26/06/2021",
+        },
+      ],
+    };
   },
   computed: {
     background: function () {
       return this.post.image;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -156,7 +180,7 @@ export default {
       padding: 50px 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.205);
       .featured {
-        color: grey; 
+        color: grey;
         text-transform: uppercase;
         margin: 5px 0;
       }
@@ -177,7 +201,7 @@ export default {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.308);
   }
   .head::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -188,4 +212,17 @@ export default {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { }
 </style>

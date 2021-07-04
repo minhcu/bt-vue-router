@@ -2,22 +2,22 @@
   <div class="blogview">
       <div class="post">
         <div class="banner">
-            <img :src="blog[postview].image" alt="">
+            <img :src="postview.image" alt="">
         </div>
         <div class="text">
             <h2>
-                {{blog[postview].title}}
+                {{postview.title}}
             </h2>
             <div class="info">
                 <span>
-                    {{blog[postview].author}}
+                    {{postview.author}}
                 </span>
                 <span>
-                    {{blog[postview].date}}
+                    {{postview.date}}
                 </span>
             </div>
             <p>
-                {{blog[postview].descript}}
+                {{postview.descript}}
             </p>
         </div>
       </div>
@@ -114,7 +114,8 @@ export default {
   },
   computed: {
     postview: function () {
-        return this.$route.params.id
+        const id = this.$route.params.id;
+        return this.blog.find(element => element.id == id);
     }
   }
 }

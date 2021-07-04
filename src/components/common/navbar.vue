@@ -7,7 +7,7 @@
       <div class="nav1">
         <router-link class="nav-item" to="/">Home</router-link>
         <router-link class="nav-item" to="/about">About</router-link>
-        <router-link class="nav-item" to="/blog">Blog</router-link>
+        <router-link class="nav-item" to="/blogs">Blog</router-link>
       </div>
       <div class="nav2">
         <router-link class="btn" v-if="!login" to="/auth/login">Login</router-link>
@@ -34,6 +34,7 @@ export default {
     width: 30%;
     img {
       cursor: pointer;
+      width: 100%;
     }
   }
   .navbar {

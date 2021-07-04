@@ -1,10 +1,10 @@
 <template>
-  <div class="blog">
-    <div class="post" :id="post.id" :key="post" v-for="post in blog" @click="$router.push('/blog/' + post.id)">
-      <div class="preview-image">
+  <div class="blog container">
+    <div class="post" :id="post.id" :key="post.id" v-for="post in blog" @click="$router.push('/blogs/' + post.id)">
+      <div class="preview-image col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
         <img :src="post.image">
       </div>
-      <div class="text">
+      <div class="text col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
         <h2> {{post.title}} </h2>
         <p class="info">
           <span>
@@ -115,14 +115,12 @@ export default {
 
 <style lang="scss">
 .blog {
-  width: 1200px;
   margin: 100px auto;
   .post {
     display: flex;
     cursor: pointer;
     margin: 30px 0;
     .preview-image {
-      width: 30%;
       img {
         width: 100%; 
         height: 100%;
@@ -130,7 +128,6 @@ export default {
       }
     }
     .text {
-      width: 70%;
       padding: 25px 25px;
       h2 {
         margin: 0;
@@ -147,5 +144,17 @@ export default {
   .post:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.205);
   }
+  @media (max-width: 575.98px) { 
+    .post {
+      padding: 10px 0;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .post {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+ }
 }
 </style>
