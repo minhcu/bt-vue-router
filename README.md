@@ -11,7 +11,7 @@ Layout: https://www.figma.com/file/fQcYavpoLAoaT3ry4mSgVD/Nuntium-Blog-UI-Design
 
 Nhận xét :
 
-- :x: router blog nên chuyển thành router blogs ( có s )
+- :heavy_check_mark: router blog nên chuyển thành router blogs ( có s )
 - :heavy_check_mark: trong phần layout chỉ nên để layout không nên để nội dung ( a đang để nội dung trang login )
 - :x: chú ý chia component uncommon và common , thường phần component của layout thì để ở common
 - :x: nội dung các trang dài nên chia thành các component
