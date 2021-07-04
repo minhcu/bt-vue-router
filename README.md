@@ -13,8 +13,8 @@ Nhận xét :
 
 - :heavy_check_mark: router blog nên chuyển thành router blogs ( có s )
 - :heavy_check_mark: trong phần layout chỉ nên để layout không nên để nội dung ( a đang để nội dung trang login )
-- :x: chú ý chia component uncommon và common , thường phần component của layout thì để ở common
+- :heavy_check_mark: chú ý chia component uncommon và common , thường phần component của layout thì để ở common
 - :x: nội dung các trang dài nên chia thành các component
 - :x: trang dashboard nên thêm điều hướng để sang các trang khác
-- :x: nội dung ít nhưng chưa responsive | Chưa responsive: About | Navbar | Home
+- :x: nội dung ít nhưng chưa responsive | *Chưa responsive: About | Navbar | Home*
 - :x: nhát đổi nội dung content :D
