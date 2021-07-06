@@ -2,6 +2,8 @@
 
 Layout: https://www.figma.com/file/fQcYavpoLAoaT3ry4mSgVD/Nuntium-Blog-UI-Design-(Community)?node-id=2%3A750
 
+New layout: https://uppercasetheme.com/uppercase/
+
 - :heavy_check_mark: Đầu tiên là project chưa run được, trong folder views ko có Home.vue, Login.vue, Dashboard.vue
 - :heavy_check_mark: đầy đủ cái routers, đầy đủ layouts
 - :heavy_check_mark: các btn yêu cầu có sử dụng được ( click logo, login )
