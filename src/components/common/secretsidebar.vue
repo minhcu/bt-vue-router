@@ -19,7 +19,7 @@
       </router-link>
 
       <!-- <router-link class="nav-item" to="/admin/dashboard" @click.native="$emit('toggleMenu')">
-        Dashboard
+        Dashboard why
       </router-link>
       <router-link class="nav-item" to="/admin/profile" @click.native="$emit('toggleMenu')">
       Profile
