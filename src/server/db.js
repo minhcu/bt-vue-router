@@ -3,6 +3,12 @@ module.exports = function () {
   faker.locale = "vi";
   const data = {
     posts: [],
+    users: {
+      name: faker.name.findName(),
+    avatar: faker.image.avatar(),
+    address: faker.address.streetAddress(),
+    phone: faker.phone.phoneNumber()
+    }
   };
   for (i = 0; i < 30; ++i) {
     data.posts.push({

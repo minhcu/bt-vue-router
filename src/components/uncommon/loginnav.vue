@@ -4,25 +4,7 @@
       <img src="../../assets/logo.png" @click="$router.push('/')" alt="logo" />
     </div>
     <div class="nav">
-      <div class="social">
-        <a href="#">
-          <i class="fab fa-facebook"></i>
-          <span>69</span>
-        </a>
-      </div>
-      <div class="social">
-        <a href="#">
-          <i class="fab fa-twitter"></i>
-          <span>69</span>
-        </a>
-      </div>
-      <div class="social">
-        <a href="#">
-          <i class="fab fa-instagram"></i>
-          <span>69</span>
-        </a>
-      </div>
-      <div class="btn" @click="$emit('toggleMenu')">Menu</div>
+      <div class="btn" @click="$router.push('/')">Go Back</div>
     </div>
   </div>
 </template>
@@ -37,10 +19,8 @@ export default {};
   position: absolute;
   left: 0;
   right: 0;
-  padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  z-index: 999;
+  top: 0;
+  padding: 20px;
   .logo {
       cursor: pointer;
   }
@@ -49,24 +29,8 @@ export default {};
     align-items: center;
     font-weight: 700;
   }
-  .social {
-    margin: 0 5px;
-    font-size: 12px;
-    display: none;
-    a {
-      color: white;
-      text-decoration: none;
-      span {
-          margin: 3px;
-      }
-    }
-    a:hover {
-      opacity: 0.5;
-      transition: 0.2s ease;
-    }
-  }
   .btn {
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 0px;
@@ -84,6 +48,7 @@ export default {};
 }
 @media (min-width: 992px) {
   .navbar {
+    display: none;
     padding-left: 60px;
     padding-right: 60px;
     .social {

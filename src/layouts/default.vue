@@ -1,6 +1,8 @@
 <template>
   <div class="default">
+    <go-back/>
     <div class="sidebar-container">
+      <navsidebar/>
       <navbar />
       <hero />
     </div>
@@ -12,12 +14,16 @@
 
 <script>
 import navbar from "../components/common/navbar.vue";
+import navsidebar from "../components/common/navsidebar.vue";
 import hero from "../components/common/hero.vue";
+import goBack from "../components/common/goBack.vue";
 
 export default {
   components: {
     navbar,
     hero,
+    goBack,
+    navsidebar
   },
 };
 </script>
@@ -27,6 +33,11 @@ export default {
 .sidebar-container {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.13);
+    position: relative;
+}
+.content-container {
+    background-color: #1c1c1c;
+    min-height: 100vh;
 }
 @media (min-width: 992px) {
   .default {
@@ -43,9 +54,6 @@ export default {
     bottom: 0;
     left: 0;
     right: 50%;
-  }
-  .content-container {
-    background-color: #1c1c1c;
   }
 }
 </style>
