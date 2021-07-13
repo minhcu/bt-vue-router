@@ -17,25 +17,6 @@
       >
         {{ link.name }}
       </router-link>
-
-      <!-- <router-link class="nav-item" to="/admin/dashboard" @click.native="$emit('toggleMenu')">
-        Dashboard why
-      </router-link>
-      <router-link class="nav-item" to="/admin/profile" @click.native="$emit('toggleMenu')">
-      Profile
-      </router-link>
-      <router-link class="nav-item" to="/admin/posting" @click.native="$emit('toggleMenu')">
-        Write a Post
-      </router-link>
-      <router-link class="nav-item" to="/admin/archives" @click.native="$emit('toggleMenu')">
-        All Post
-      </router-link>
-      <router-link class="nav-item" to="/admin/settings" @click.native="$emit('toggleMenu')">
-        Settings
-      </router-link>
-      <router-link class="nav-item" to="/admin/help" @click.native="$emit('toggleMenu')">
-      Help
-      </router-link> -->
     </div>
     <div class="copyright">
       <p>This is copy right®</p>

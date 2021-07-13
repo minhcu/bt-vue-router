@@ -36,6 +36,9 @@ export default {
 
 
 <style lang="scss" scoped>
+#app {
+  overflow: hidden;
+}
 .slide-fade-enter-active {
   transition: all 0.3s;
 }

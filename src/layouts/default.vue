@@ -2,8 +2,8 @@
   <div class="default">
     <go-back/>
     <div class="sidebar-container">
-      <navsidebar/>
-      <navbar />
+      <navsidebar v-bind:class="{active: showSideBar}"/>
+      <navbar @toggleMenu="toggleMenu"/>
       <hero />
     </div>
     <div class="content-container">
@@ -25,6 +25,16 @@ export default {
     goBack,
     navsidebar
   },
+  data() {
+    return {
+      showSideBar: false,
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.showSideBar = !this.showSideBar
+    }
+  }
 };
 </script>
 

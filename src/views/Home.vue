@@ -18,8 +18,8 @@
           </div>
         </div>
     </div>
-    <div class="row">
-      <pagination :records="records" v-model="page" :per-page="recordPerPage">
+    <div class="row justify-content-center text-center">
+      <pagination class="paginaion" :records="records" v-model="page" :per-page="recordPerPage">
       </pagination>
     </div>
   </div>
